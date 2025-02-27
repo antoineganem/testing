@@ -8,8 +8,10 @@ describe('-1 - -1 = 0', function() {
   let vars;
 
   beforeEach(async function() {
-    const options = new chrome.Options(); // No user-data-dir argument
-
+    const options = new chrome.Options()
+      .addArguments('--headless') // Run without UI
+      .addArguments('--no-sandbox') // Required for GitHub Actions
+      .addArguments('--disable-dev-shm-usage'); // Prevent shared memory issues
     
     try {
       driver = await new Builder()
