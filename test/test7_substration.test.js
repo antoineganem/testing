@@ -2,6 +2,10 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
+const options = new chrome.Options();
+options.addArguments('--user-data-dir=/tmp/chrome-profile'); // Set a unique profile path
+
+
 describe('Empty field - empty field = 0', function() {
   this.timeout(30000)
   let driver
