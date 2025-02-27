@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Use a full Ubuntu VM instead of a container
+    runs-on: ubuntu-latest  # Full Ubuntu VM
 
     steps:
     - name: Checkout Code
@@ -25,9 +25,13 @@ jobs:
     - name: Verify Chrome Installation
       run: google-chrome --version
 
+    - name: Kill Running Chrome Processes
+      run: |
+        pkill -f chrome || true  # Ignore errors if no process is running
+
     - name: Install Dependencies
       run: npm install
-      working-directory: ./test  # Set working directory to 'test' since package.json is there
+      working-directory: ./test  # Ensure the correct working directory
 
     - name: Start Web Server
       run: |
@@ -40,6 +44,7 @@ jobs:
       env:
         CHROME_BIN: /usr/bin/google-chrome
         SELENIUM_BROWSER: chrome
-        CHROMEDRIVER_ARGS: "--user-data-dir=/tmp/chrome-profile"
+        CHROMEDRIVER_ARGS: "--user-data-dir=/tmp/chrome-profile-${{ github.run_id }}"
+
 
 
