@@ -32,7 +32,7 @@ jobs:
         working-directory: test  # Run inside "test" folder
 
       - name: Run Mocha tests
-        run: ls 
+        run: npx mocha "test/**/*.test.js"
         
       - name: Upload screenshots (if tests fail)
         if: failure()
