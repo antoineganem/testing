@@ -26,6 +26,7 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
+      working-directory: test  # Set working directory to 'test' since package.json is there
 
     - name: Start Web Server
       run: |
