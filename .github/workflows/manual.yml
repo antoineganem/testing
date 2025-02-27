@@ -34,7 +34,8 @@ jobs:
     - name: Start Web Server
       run: |
         python3 -m http.server 8000
-        sleep 5      # Give time for the server to start
+        sleep 5     
+      working-directory: ./src  # Set working directory to 'test' since package.json is there
 
     - name: Run Tests
       run: npx mocha "test/**/*.test.js"
