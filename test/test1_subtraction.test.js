@@ -8,8 +8,8 @@ describe('-1 - -1 = 0', function() {
   let vars;
 
   beforeEach(async function() {
-    const userDataDir = `/tmp/chrome-profile-${Date.now()}`;  // Unique directory for each test
-    const options = new chrome.Options().addArguments(`--user-data-dir=${userDataDir}`);
+    const options = new chrome.Options(); // No user-data-dir argument
+
     
     try {
       driver = await new Builder()
