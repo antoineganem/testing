@@ -9,14 +9,15 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 20
 
-    - uses: browser-actions/setup-chrome@v1
+    - name: Install Chrome
+      uses: browser-actions/setup-chrome@v1
       with:
         chrome-version: 120
         install-dependencies: true
@@ -31,9 +32,14 @@ jobs:
     - name: Start Web Server
       run: |
         python3 -m http.server 8000 &  # Run in the background
-      working-directory: ./src  # Set working directory to 'test' since package.json is there
+      working-directory: ./src
 
-    - name: Run Tests
-      run: npx mocha "test/**/*.test.js"
+    - name: Run Tests with WebDriver Fix
+      run: |
+        npx mocha "test/**/*.test.js"
+      env:
+        CHROME_BIN: /usr/bin/google-chrome
+        SELENIUM_BROWSER: chrome
+        CHROMEDRIVER_ARGS: "--user-data-dir=/tmp/chrome-profile"
 
 
