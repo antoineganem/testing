@@ -44,7 +44,5 @@ jobs:
       env:
         CHROME_BIN: /usr/bin/google-chrome
         SELENIUM_BROWSER: chrome
-        CHROMEDRIVER_ARGS: "--user-data-dir=/tmp/chrome-profile-${{ github.run_id }}"
-
 
 
