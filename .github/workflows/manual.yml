@@ -5,51 +5,34 @@ on:
 
 jobs:
   test:
-    name: UI Test
-    runs-on: ubuntu-latest
-
-    container:
-      image: node:20  # Runs inside Node.js 20 container
-
-    services:
-      selenium:
-        image: selenium/standalone-chrome
-        options: --shm-size=2gb  # Prevents browser crashes
+    runs-on: ubuntu-latest  # Use a full Ubuntu VM instead of a container
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout Code
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: test/package-lock.json  # Caches dependencies
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: test  # Run inside "test" folder
+    - name: Install Chrome & ChromeDriver
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+        sudo apt-get install -y chromium-chromedriver
+        echo "CHROME_BIN=/usr/bin/google-chrome" >> $GITHUB_ENV
+        echo "CHROMEDRIVER_BIN=/usr/bin/chromedriver" >> $GITHUB_ENV
 
-      - name: Install Chrome & ChromeDriver
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-          sudo apt-get install -y chromium-chromedriver
-          echo "CHROME_BIN=/usr/bin/google-chrome" >> $GITHUB_ENV
-          echo "CHROMEDRIVER_BIN=/usr/bin/chromedriver" >> $GITHUB_ENV
+    - name: Install Dependencies
+      run: npm install
 
-      - name: Start Web Server (Modify this if needed)
-        run: |
-          npm start &  # Replace with your actual start command
-          sleep 5      # Wait for the server to start
-      - name: Run Mocha tests
-        run: npx mocha "test/**/*.test.js"
-        
-      - name: Upload screenshots (if tests fail)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: screenshots
-          path: test/screenshots/
+    - name: Start Web Server
+      run: |
+        npm start &  # Modify this to match your actual start command
+        sleep 5      # Give time for the server to start
+
+    - name: Run Tests
+      run: npx mocha "test/**/*.test.js"
+
 
