@@ -1,0 +1,663 @@
+{
+  "id": "523794a8-432d-4080-8cb1-4371043bddd6",
+  "version": "2.0",
+  "name": "Subtraction calculator",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "85892de5-0cdb-40b3-b4fb-61e7e33a7a17",
+    "name": "1 - 1",
+    "commands": [{
+      "id": "17831382-f0ab-4ba2-8873-dad2c2907854",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c7d968a-d7ef-40d7-b431-395e130991e6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a75936a-a908-440d-b4fd-8e2efe08b0d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72dc836e-534e-4bc2-bef5-edcd94e5ef7c",
+      "comment": "",
+      "command": "type",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "1cc48f17-0de9-426f-b5c9-415417c99601",
+      "comment": "",
+      "command": "click",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd10fa67-4e34-4318-82d6-683e4885730c",
+      "comment": "",
+      "command": "type",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "21197f55-3dbc-4c99-b094-af69e530755c",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='subtraction()']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Subtraction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a6aa5233-e4e0-4a97-835b-b8471e34ac65",
+    "name": "0 - 0",
+    "commands": [{
+      "id": "2731be99-b726-44d3-aaf5-d508e0a071b4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e28dcd65-5d02-4ccb-a5f7-ad5d0ab00213",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18d5dc6c-ac40-4aa8-85b2-425a38aeac26",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37a7961e-21a3-476b-b22b-8490b072f291",
+      "comment": "",
+      "command": "type",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "5d0d8aca-1767-4a87-bba4-152c030676a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-group:nth-child(4) > label",
+      "targets": [
+        ["css=.input-group:nth-child(4) > label", "css:finder"],
+        ["xpath=//div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Enter second number:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65dce607-3696-42fa-9deb-eeeae1d3651b",
+      "comment": "",
+      "command": "type",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "a6c5fa2c-cb88-40a4-be17-2b389656576a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wrapper",
+      "targets": [
+        ["css=.wrapper", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "954896d1-3ee2-4876-8f74-80a0709851ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='subtraction()']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Subtraction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a17483db-12d3-43cc-b98b-746622fa4103",
+    "name": "Empty field - empty field = 0",
+    "commands": [{
+      "id": "17457d57-a178-4ece-a154-e6c9df4490c7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59e20418-e1fc-43e9-b8d9-c06260c81b77",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dde01d2e-1441-4f80-9ec4-04f911b9fdf9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='subtraction()']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Subtraction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e6fe6361-40ca-44a6-95e4-54b110c23a39",
+    "name": "1000000000001 - 1 =1000000000000",
+    "commands": [{
+      "id": "e9a201c9-15e3-43a9-9800-2197ca856ecb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acc761e8-c1f9-40c6-a1e6-5a7ce1c28e25",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7fecedb-1515-43f0-b2d7-6209c66daa26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wrapper",
+      "targets": [
+        ["css=.wrapper", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "525e5749-aa54-40ab-b782-aab99ea12240",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "589f6beb-67b8-4f8c-98a1-ec209b94cd28",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14ee32fc-2b72-469f-905a-e7ae94ef801f",
+      "comment": "",
+      "command": "type",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1000000000001 "
+    }, {
+      "id": "4032cfd5-0cf6-479c-9c28-03939689d4a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de93861d-ee36-4936-b0be-02ac7bbbbdc8",
+      "comment": "",
+      "command": "type",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "53b98559-d98d-4717-81d0-b9b0194eddb3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wrapper",
+      "targets": [
+        ["css=.wrapper", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29cc7b77-1f74-4c80-a441-d8ce786e2f46",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='subtraction()']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Subtraction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a67b26e8-675e-4d7c-a2b9-ed80d598631d",
+    "name": "010101  - 010101 = Error",
+    "commands": [{
+      "id": "eed06586-a11d-4c93-baa3-76bb05632c05",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abb89e94-c7ca-463c-a6d6-403fd4a73cff",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x518",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "722b4991-2f3e-4d66-ac1a-dd61a35f5225",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a625eee-9acb-4ffd-8dd2-98b5a9be49cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf197603-db40-4b02-9f45-50b9a3e61703",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea74a562-3b7d-4491-99f4-6134b7186e71",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bb7723f-7bbf-47c7-ba50-52f8f0911711",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "964b9b7d-1fd4-45a0-a91d-1b8652a67512",
+      "comment": "",
+      "command": "type",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "010101  + 010101 = Error"
+    }, {
+      "id": "7027c263-12a6-4817-bb5f-00d62e06787c",
+      "comment": "",
+      "command": "click",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93585bc5-9a01-4e30-845b-fdeb5f1ff2cf",
+      "comment": "",
+      "command": "type",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "010101"
+    }, {
+      "id": "9f10517b-b71f-42ef-a310-6c42d86d1f8d",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0772e95e-8a1d-43bf-adc2-7d921ed0bc3a",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d877930-c5bf-4c31-bdf7-d22ca9451f9e",
+      "comment": "",
+      "command": "type",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "010101  "
+    }, {
+      "id": "6cbf9351-909c-41d1-a5b0-cfad709ef08a",
+      "comment": "",
+      "command": "click",
+      "target": "id=operator",
+      "targets": [
+        ["id=operator", "id"],
+        ["css=#operator", "css:finder"],
+        ["xpath=//h3[@id='operator']", "xpath:attributes"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'+/-')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7adca452-677c-4dea-b2aa-4b007f8d123c",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='subtraction()']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Subtraction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "31337c24-58b6-4834-b58f-f2c2fbe8eb77",
+    "name": "-1 - -1 = 0",
+    "commands": [{
+      "id": "78bd4818-00b1-423e-8ebc-3462ce2c00c1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4aca498f-7dac-4592-b836-bf7bc97b707a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x702",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1bca1dea-a9f4-4b88-b89f-0ab7754d7cca",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d80a1e0-d230-48ea-b3e7-575c36d7c099",
+      "comment": "",
+      "command": "type",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-1"
+    }, {
+      "id": "6649df39-a3ca-4590-8014-ec9d2c2094a7",
+      "comment": "",
+      "command": "click",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0eff675e-79fa-447a-93b9-2fe6125de2f7",
+      "comment": "",
+      "command": "type",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "-1"
+    }, {
+      "id": "c949dede-466e-41a5-8876-9233de587233",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='subtraction()']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Subtraction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4a0d774b-714f-4e68-848d-db5614c09ce3",
+    "name": "01 - 01 = Error",
+    "commands": [{
+      "id": "b897d45d-6e33-4f0f-ba24-0719cb610929",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f18433e-ddc6-4adc-bef6-e0d4a1362f5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x518",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2561618-f031-45b6-b11e-dcba1f3bbd6c",
+      "comment": "",
+      "command": "click",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7803c46-1ccf-4b5c-b7bd-7dbfc37a97bf",
+      "comment": "",
+      "command": "type",
+      "target": "id=num1",
+      "targets": [
+        ["id=num1", "id"],
+        ["css=#num1", "css:finder"],
+        ["xpath=//input[@id='num1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01"
+    }, {
+      "id": "e5ccf1e2-2dcd-4201-9387-f8eb505327cb",
+      "comment": "",
+      "command": "click",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fdaaae0-cb6c-4862-9187-8102d9897a60",
+      "comment": "",
+      "command": "type",
+      "target": "id=num2",
+      "targets": [
+        ["id=num2", "id"],
+        ["css=#num2", "css:finder"],
+        ["xpath=//input[@id='num2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "01"
+    }, {
+      "id": "c700b236-bbd8-49be-b673-2b6913ea055d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wrapper",
+      "targets": [
+        ["css=.wrapper", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e38a0083-ea42-4473-b7f2-d9e08a3a6ffd",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='subtraction()']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Subtraction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ae517bc7-068a-4d42-925e-d40de9cfbe5b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["85892de5-0cdb-40b3-b4fb-61e7e33a7a17"]
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}
