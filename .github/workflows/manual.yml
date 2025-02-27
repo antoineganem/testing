@@ -31,6 +31,18 @@ jobs:
         run: npm install
         working-directory: test  # Run inside "test" folder
 
+      - name: Install Chrome & ChromeDriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          sudo apt-get install -y chromium-chromedriver
+          echo "CHROME_BIN=/usr/bin/google-chrome" >> $GITHUB_ENV
+          echo "CHROMEDRIVER_BIN=/usr/bin/chromedriver" >> $GITHUB_ENV
+
+    - name: Start Web Server (Modify this if needed)
+      run: |
+        npm start &  # Replace with your actual start command
+        sleep 5      # Wait for the server to start
       - name: Run Mocha tests
         run: npx mocha "test/**/*.test.js"
         
