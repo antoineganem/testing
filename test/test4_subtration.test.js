@@ -3,8 +3,6 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert')
 
-const options = new chrome.Options();
-options.addArguments('--headless');
 
 
 
@@ -13,7 +11,12 @@ describe('01 - 01 = Error', function() {
   let driver
   let vars
   beforeEach(async function() {
-    driver = await new Builder().forBrowser('chrome').build()
+    const userDataDir = `/tmp/chrome-profile-${Date.now()}`; 
+    const options = new chrome.Options().addArguments(`--user-data-dir=${userDataDir}`);
+    driver = await new Builder()
+    .forBrowser('chrome')
+    .setChromeOptions(options)
+    .build();
     vars = {}
   })
   afterEach(async function() {
