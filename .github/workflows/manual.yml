@@ -24,8 +24,11 @@ jobs:
         echo "CHROME_BIN=/usr/bin/google-chrome" >> $GITHUB_ENV
         echo "CHROMEDRIVER_BIN=/usr/bin/chromedriver" >> $GITHUB_ENV
 
+    - name: Verify Directory Structure
+      run: ls -R   # Show all files to confirm package.json location
+      
     - name: Install Dependencies
-      run: ls
+      run: npm install
       working-directory: ./test  # Set working directory to 'test' since package.json is there
 
     - name: Start Web Server
