@@ -3,7 +3,9 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert')
 
+const options = new chrome.Options();
 options.addArguments('--headless');
+
 
 describe('0 - 0', function() {
   this.timeout(30000)
