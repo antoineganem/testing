@@ -1,11 +1,11 @@
 name: Run Tests
 
 on:
-  workflow_dispatch:  # Allows manual execution
+  workflow_dispatch:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Full Ubuntu VM
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Code
@@ -25,24 +25,18 @@ jobs:
     - name: Verify Chrome Installation
       run: google-chrome --version
 
-    - name: Kill Running Chrome Processes
-      run: |
-        pkill -f chrome || true  # Ignore errors if no process is running
-
     - name: Install Dependencies
       run: npm install
-      working-directory: ./test  # Ensure the correct working directory
+      working-directory: ./test
 
     - name: Start Web Server
-      run: |
-        python3 -m http.server 8000 &  # Run in the background
+      run: python3 -m http.server 8000 &  
       working-directory: ./src
 
-    - name: Run Tests with WebDriver Fix
+    - name: Run Selenium Tests
       run: |
         npx mocha "test/test1_subtraction.test.js"
       env:
         CHROME_BIN: /usr/bin/google-chrome
         SELENIUM_BROWSER: chrome
-
 
