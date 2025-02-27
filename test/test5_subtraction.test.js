@@ -3,8 +3,8 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert')
 
-const options = new chrome.Options();
-options.addArguments('--user-data-dir=/tmp/chrome-profile'); // Set a unique profile path
+options.addArguments('--headless');
+
 
 
 describe('010101  - 010101 = Error', function() {
