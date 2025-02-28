@@ -39,6 +39,7 @@ jobs:
     - name: Run Selenium Tests
       run: |
         ./node_modules/.bin/mocha *.js
+      working-directory: ./tests
       env:
         CHROME_BIN: /usr/bin/google-chrome
         SELENIUM_BROWSER: chrome
