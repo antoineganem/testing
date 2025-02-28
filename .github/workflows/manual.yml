@@ -27,7 +27,7 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
-      working-directory: ./test
+      working-directory: ./tests
 
     - name: Start Web Server
       run: python3 -m http.server 8000 &  
@@ -35,7 +35,7 @@ jobs:
 
     - name: Run Selenium Tests
       run: |
-        npx mocha "test/test1_subtraction.test.js"
+        npx mocha "tests/test1_subtraction.test.js"
       env:
         CHROME_BIN: /usr/bin/google-chrome
         SELENIUM_BROWSER: chrome
