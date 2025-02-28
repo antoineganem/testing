@@ -38,7 +38,7 @@ jobs:
 
     - name: Run Selenium Tests
       run: |
-        npx mocha "tests/test1_subtraction.test.js"
+        ./node_modules/.bin/mocha *.js
       env:
         CHROME_BIN: /usr/bin/google-chrome
         SELENIUM_BROWSER: chrome
