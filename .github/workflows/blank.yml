@@ -34,7 +34,7 @@ jobs:
       
     - name: Build and run server
       run: |
-        cd Backend
+        cd backend
         # Compilar primero
         ./mvnw clean package
         # Iniciar el servidor en segundo plano
@@ -53,7 +53,7 @@ jobs:
         
     - name: Run API tests
       run: |
-        cd Backend
+        cd backend
         echo "Ejecutando pruebas con Newman..."
         newman run src/test/java/com/example/calculator/JAVA.postman_collection.json
       
