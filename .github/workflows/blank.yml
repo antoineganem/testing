@@ -27,7 +27,7 @@ jobs:
         node-version: '20'
     
     - name: Fix Maven wrapper permissions
-      run: chmod +x Backend/mvnw
+      run: chmod +x backend/mvnw
       
     - name: Install Newman
       run: npm install -g newman
