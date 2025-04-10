@@ -55,7 +55,7 @@ jobs:
       run: |
         cd backend
         echo "Ejecutando pruebas con Newman..."
-        newman run src/test/java/com/example/calculator/JAVA.postman_collection.json
+        newman run src/test/java/MySpringBootAPI/Calculator/JAVA.postman_collection.json
       
     - name: Clean up
       if: always()
