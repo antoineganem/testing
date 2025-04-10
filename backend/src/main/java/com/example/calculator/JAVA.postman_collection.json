@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "472986f0-7a1b-4003-98da-bf019fc9995c",
+		"name": "Calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35067775",
+		"_collection_link": "https://planetary-star-341493.postman.co/workspace/New-Team-Workspace~8a2714e6-eb55-4b75-b276-9ee5367694b6/collection/35067775-472986f0-7a1b-4003-98da-bf019fc9995c?action=share&source=collection_link&creator=35067775"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/add?num1=10&num2=10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/add?num1=10&num2=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "10"
+						},
+						{
+							"key": "num2",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/sub?num1=1&num2=10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sub?num1=1&num2=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sub"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "1"
+						},
+						{
+							"key": "num2",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
